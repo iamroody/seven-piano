@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f7f6f2"><title>七音 · 随手弹点快乐</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header><a class="brand" href="./"><span class="logo"><i></i><i></i><i></i><i></i></span>七音<span class="brand-en">JUST PLAY</span></a><button class="help" id="help">怎么玩 <span>↗</span></button></header>
+<main>
+<section class="intro"><div class="eyebrow">你的第一架小钢琴</div><h1>七个音，就很<span>开心。</span><span class="spark" aria-hidden="true">✳</span></h1><p>不用懂乐理，也能弹出喜欢的旋律。<br class="mobile">按下 1–7，从第一声开始。</p></section>
+<section class="instrument" aria-label="七键钢琴">
+<div class="instrument-top"><div class="sound-label"><span class="status-dot"></span><span id="audio-status" role="status">正在准备钢琴…</span> <span class="small">C 大调</span></div><label class="volume">音量 <input aria-label="音量" id="volume" type="range" min="0" max="100" value="65"></label></div>
+<div class="keys" id="keys"></div>
+<div class="instrument-bottom"><span><kbd>1</kbd> — <kbd>7</kbd> 键盘弹奏 <span class="divider">/</span> 点击琴键也可以</span><span id="played">每一次按下，都算音乐。</span></div>
+</section>
+<section class="library" aria-labelledby="library-title"><div class="library-heading"><div><h2 id="library-title">从一首熟悉的小曲开始</h2><p>看数字，按同样的琴键。就是这么简单。</p></div><span class="library-note">不赶时间，慢慢弹 ↘</span></div>
+<div class="song-layout"><nav id="songs" aria-label="选择曲目"></nav><div class="score-panel"><div class="score-top"><div><span class="tag">入门友好</span><h3 id="song-title"></h3></div><div class="playback"><select id="speed" aria-label="试听速度"><option value="1">正常速度</option><option value="0.65">慢一点</option></select><button id="listen" class="listen">▶ 听一听</button></div></div><div id="score" class="score" aria-label="数字简谱"></div><div class="score-bottom"><span id="progress" aria-live="polite">跟着橙色数字，弹出第一句</span><button id="restart">↻ 重新开始</button></div></div></div></section>
+<div class="closing"><span>1 2 3 4 5 6 7</span>没有弹错，只有属于你的即兴。</div>
+</main><footer><span>七音 · 让快乐简单一点</span><span>Made for a little play.</span></footer>
+<dialog id="guide"><button id="close-guide" aria-label="关闭说明">×</button><h2>你的第一首歌，从 1 开始。</h2><p>点击七个琴键，或按电脑键盘上的数字 <b>1–7</b>。它们就是 do、re、mi、fa、sol、la、si。</p><p>选一首小曲，跟着橙色数字弹。弹对后会自动走到下一音；弹错也没关系，再试一次。</p><p>数字下的短线表示半拍，数字后的横线表示延长一拍。先点「听一听」熟悉节奏，再用「慢一点」轻松练习。</p><button class="listen" id="start">开始玩吧</button></dialog>
+<script src="piano-samples.js"></script><script src="app.js"></script></body></html>
