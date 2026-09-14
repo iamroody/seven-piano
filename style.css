@@ -96,3 +96,6 @@ h1{font-size:clamp(32px,3.5vw,44px)}
 .icon-button:hover,.phrase-toolbar #restart:hover{background:#f1e9df;color:#b85237}
 .icon-button:active,.phrase-toolbar #restart:active{background:#eadccf}
 @media(max-width:700px){.phrase-toolbar .score-tools{gap:3px}.icon-button,.phrase-toolbar #restart{padding:10px}}
+
+/* Long-pressing a key should play it, never select its labels. */
+.key,.key *{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
